@@ -10,17 +10,20 @@ Create Password
 <h1>Create Password</h1>
 <br>
 <!-- create a django form -->
-<form action="">
+<form action="password">
 
     <select name="length" id="">
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
         <option value="11">11</option>
-        <option value="12">12</option>
+        <!-- to make 12 the default  -->
+        <option value="12" selected >12</option> 
         <option value="13">13</option>
         <option value="14">14</option>
     </select>
+
+    <input type="submit" value="Generate">
 
 </form>
 
