@@ -1,11 +1,27 @@
 <!-- get contents from base.html: home is inheriting from base.html -->
 {% extends "base.html" %}
 
+{% block title %}
+Create Password
+{% endblock title %}
 
 {% block content %}
 
-<h1>Hello world! I am creating a Password Generator</h1>
+<h1>Create Password</h1>
 <br>
-{{username}}
+<!-- create a django form -->
+<form action="">
+
+    <select name="length" id="">
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+    </select>
+
+</form>
 
 {% endblock content %}
