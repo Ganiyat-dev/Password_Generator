@@ -10,7 +10,7 @@ Create Password
 <h1>Create Password</h1>
 <br>
 <!-- create a django form -->
-<form action="password">
+<form action="{% url 'password' %}">
 
     <select name="length" id="">
         <option value="8">8</option>
