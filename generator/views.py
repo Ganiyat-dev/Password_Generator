@@ -5,6 +5,8 @@ import random
 def HomeView(request):
     return render(request, 'home.html')
 
+
+# create a logic to get response of uppercase, lowercase and or special characters in generating the password
 def PasswordView(request):
     characters = list('abcdefghijklmnopqrstuvwxyz')
 
