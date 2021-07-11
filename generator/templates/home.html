@@ -7,7 +7,8 @@ Create Password
 
 {% block content %}
 
-<h1>Create Password</h1>
+<div class="flex flex-col text-center w-full mb-12">
+    <h1 class="text-2xl font-bold text-red-400">Create Password</h1>
 <br>
 <!-- create a django form -->
 <form action="{% url 'password' %}">
@@ -28,11 +29,15 @@ Create Password
     <br>
     <input type="checkbox" name="numbers" /> Numbers
     <br>
-    <input type="checkbox" name="special" /> Special Characters
+    <input type="checkbox" name="special" class="mb-12"/> Special Characters
     <br>
 
-    <input type="submit" value="Generate"/>
+    <input type="submit" value="Generate" class="flex mx-auto text-white bg-indigo-400 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg"/>
 
 </form>
+
+
+</div>
+
 
 {% endblock content %}
