@@ -6,14 +6,24 @@ def HomeView(request):
     return render(request, 'home.html')
 
 def PasswordView(request):
-    charaters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+    characters = list('abcdefghijklmnopqrstuvwxyz')
+
+    if request.GET.get('uppercase'):
+        characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+
+    if request.GET.get('numbers'):
+        characters.extend(list('0123456789'))
+
+    if request.GET.get('special'):
+        characters.extend(list('!@#$%^&*()'))
     
-    length = request.GET.get('length')
+    
+    length = int(request.GET.get('length'))
     password = ''
 
-    for i in range(int(length)):
-        password += random.choice(charaters)
+    for i in range(length):
+        password += random.choice(characters)
 
     
-    context = {'password': password}
+    context = {"password": password}
     return render(request, 'password.html', context)
